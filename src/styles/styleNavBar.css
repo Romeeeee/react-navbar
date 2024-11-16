@@ -1,0 +1,77 @@
+/* Horizontal Folder Navbar Styles */
+.folder-nav-horizontal {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-bottom: 2px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+}
+
+.folder {
+  position: relative;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.folder-label {
+  display: flex;
+  align-items: center;
+  background-color: #e6e6e6;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.folder-label:hover {
+  background-color: #d9d9d9;
+}
+
+.folder-icon {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.folder-contents {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.folder-contents a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.folder-contents a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .folder-nav-horizontal {
+    flex-wrap: wrap;
+    padding: 5px;
+  }
+
+  .folder {
+    margin: 5px;
+  }
+}
